@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Triagem</title>
     <link href="./styles/index.css" rel="stylesheet" />
   </head>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="register-form-popup hidden">
-      <form class="register-form">
+      <form class="register-form" method="post">
         <div id="form-field-1" class="">
           <label for="name" class="register-input-label">
             Qual o seu nome?
@@ -82,6 +82,14 @@
         <img class="nav__icon" src="assets/icons/themometer.svg">
       </button>
 
+      <button data-target="glucose-block" class="nav__button">
+        <img class="nav__icon" src="assets/icons/glucose.svg">
+      </button>
+
+       <button data-target="saturation-block" class="nav__button">
+        <img class="nav__icon" src="assets/icons/spo2.svg">
+      </button>
+
       <button data-target="hr-block" class="nav__button">
         <img class="nav__icon" src="assets/icons/hr.svg">
       </button>
@@ -94,14 +102,6 @@
         <img class="nav__icon" src="assets/icons/ecg.svg">
       </button>
 
-      <button data-target="saturation-block" class="nav__button">
-        <img class="nav__icon" src="assets/icons/spo2.svg">
-      </button>
-
-      <button data-target="glucose-block" class="nav__button">
-        <img class="nav__icon" src="assets/icons/glucose.svg">
-      </button>
-
       <button data-target="cycle-block" class="nav__button">
         <img class="nav__icon" src="assets/icons/menstruation.svg">
       </button>
@@ -109,43 +109,119 @@
   </header>
   <main class="page">
     <div class="symptom-input"> 
-      <form>
-      <div id="symptom-block" class="symptom-input__block symptom-input__block_questions">
+      <form method="post">
+      <div id="symptoms-block" class="half-block symptom-input__block symptom-input__block_questions">
         Sintomas
       </div>
 
-      <div id="temp-block" class="symptom-input__block symptom-input__block_temperature hidden">
-        <div class="symptom-input__inputs">
-          <label for="temperature__value" class="temperature__label">Temperatura Corporal:</label>
-          <div class="temperature__display">
-            <input 
-              type="number" 
-              id="body-temp" 
-              name="body-temp" 
-              min="36.0" 
-              max="40.0" 
-              step="0.1" 
-              value="37.0" 
-              required
-              class="temperature__value">
-            <p class="temperature__celcius">°C</p>
-          </div>
-        
+      <div id="temp-block" class="half-block symptom-input__block symptom-input__block_temperature hidden">
+        <div class="temperature-input-box">
           <input id="temperature-slider" type="range" min="36" max="40" value="37" step="0.1" class="temperature-slider">
           <img src="thermometer.svg" class="thermometer">
         </div>
+
+        <div class="temperature-value">
+          <label for="temperature-input" class="value__label">Temperatura Corporal:</label>
+            <div class="value__display">
+              <input 
+                type="number" 
+                id="temperature-input" 
+                name="temperature-input" 
+                min="30.0" 
+                max="40.0" 
+                step="0.1" 
+                value="37.0" 
+                class="value">
+              <p class="value__unit">°C</p>
+            </div>
+        </div>
       </div>
 
-      <div id="hr-block" class="symptom-input__block symptom-input__block_heart-rate hidden">
-        Batimentos
+      <div id="glucose-block" class="half-block symptom-input__block symptom-input__block_glucose hidden">
+
+        <label for="glucose-input" class="value__label">Glicose:</label>
+        <div class="value__display">
+          <input 
+            type="number" 
+            id="glucose-input" 
+            name="glucose-input" 
+            min="30.0" 
+            max="150.0" 
+            step="0.1" 
+            value="100" 
+            class="value">
+          <p class="value__unit">mmol/L</p>
+        </div>
       </div>
 
-      <div id="bp-block" class="symptom-input__block symptom-input__block_blood-pressure hidden">
+      <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_oxygen hidden">
+
+        <label for="saturation-input" class="value__label">Saturação de Oxigênio:</label>
+        <div class="value__display">
+          <input 
+            type="number" 
+            id="saturation-input" 
+            name="saturation-input" 
+            min="0" 
+            max="100" 
+            step="1" 
+            value="100" 
+            class="value">
+          <p class="value__unit">%</p>
+        </div>
+      </div>
+
+      <div id="hr-block" class="half-block symptom-input__block symptom-input__block_heart-rate hidden">
+
+        <label for="hr-input" class="value__label"> Batimentos:</label>
+        <div class="value__display">
+          <input 
+            type="number" 
+            id="hr-input" 
+            name="hr-input" 
+            min="30" 
+            max="250" 
+            step="1" 
+            value="60" 
+            class="value">
+          <p class="value__unit">bpm</p>
+        </div>
+      </div>
+
+      <div id="bp-block" class="half-block symptom-input__block symptom-input__block_blood-pressure hidden">
         Pressão Arterial
+
+        <label for="bp-systolic-input" class="value__label"> Sístole:</label>
+        <div class="value__display">
+          <input 
+            type="number" 
+            id="bp-systolic-input" 
+            name="bp-systolic-input" 
+            min="0" 
+            max="300" 
+            step="1" 
+            value="110" 
+            class="value">
+          <p class="value__unit">mm Hg</p>
+        </div>
+
+        <label for="bp-diastolic-input" class="value__label"> Diástole:</label>
+        <div class="value__display">
+          <input 
+            type="number" 
+            id="bp-diastolic-input" 
+            name="bp-diastolic-input" 
+            min="0" 
+            max="300" 
+            step="1" 
+            value="70" 
+            class="value">
+          <p class="value__unit">mm Hg</p>
+        </div>
       </div>
       
-      <div id="ecg-block" class="symptom-input__block symptom-input__block_ecg hidden">
-        <label for="ecg__result">Selecione o resultado do eletrocardiograma mais recente:</label>
+      <div id="ecg-block" class="half-block symptom-input__block symptom-input__block_ecg hidden">
+        <label for="ecg__result" class="value__label">Selecione o resultado do eletrocardiograma mais recente:</label>
         <select id="ecg__result" class="ecg__result">
           <option value="sinus-rythm">Ritimo Sinuvial</option>
           <option value="bradycardia">Bradicardia</option>
@@ -164,15 +240,7 @@
         </div>
       </div>
 
-      <div id="saturation-block" class="symptom-input__block symptom-input__block_oxygen hidden">
-        Saturação de Oxigênio
-      </div>
-
-      <div id="glucose-block" class="symptom-input__block symptom-input__block_glucose hidden">
-        Glicose
-      </div>
-
-      <div id="cycle-block" class="symptom-input__block symptom-input__block_menstruation hidden">
+      <div id="cycle-block" class="half-block symptom-input__block symptom-input__block_menstruation hidden">
         Menstruação
       </div>
       </form>
@@ -185,16 +253,33 @@
     </div>
   </main>
   <footer class="footer">
-    <button id="button-logout" class="medium-button">
-      Sair
+    <button id="button-config" class="medium-button button-blue">
+      Configurações
     </button>
 
-    <button id="button-delete" class="medium-button">
-      Deletar Dados
+     <button id="button-report" class="medium-button button-red">
+      Exportar Formulário
     </button>
+
+    <div class="config-popup-bg hidden">
+      <div class="config-popup">
+        <button class="close-button">
+          X
+        </button>
+
+        <button id="button-logout" class="medium-button">
+          Sair
+        </button>
+
+        <button id="button-delete" class="medium-button">
+          Deletar Dados
+        </button>
+      </div>
+    </div>
   </footer>
 
   <script type="module" src="./scripts/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </body>
 </html>
 

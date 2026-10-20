@@ -8,15 +8,42 @@
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 10px #a9c5cc;
   background: radial-gradient(circle, rgba(216, 220, 255, 0.1), rgba(76, 144, 240, 0.1));
-  padding: 15px;
-
-  max-height: 500px;
+  padding: 30px;
 }
 
-.symptom-input__inputs{
+.value__label{
+  font-weight: 300;
+  font-size: 20px;
+  color: navy;
+  margin: 10px;
+}
+
+.value__display{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  border-radius: 10px;
+  border-bottom: 2px solid aliceblue;
+  box-shadow: 0 8px 6px -6px #a9c5cc;
   align-items: center;
-  padding: 30px;
+  min-width: 150px;
+}
+
+.value{
+  display: inline-block;
+  background: none;
+  border: none;
+  min-width: 70px;
+  max-width: 100px;
+  min-height: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 30px;
+  color: navy;
+}
+
+.value__unit{
+  font-weight: 700;
+  font-size: 30px;
+  color: navy;
+  display: inline;
 }

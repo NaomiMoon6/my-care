@@ -7,9 +7,11 @@
 /* Blocks */
 @import url(./blocks/header.css);
 @import url(./blocks/footer.css);
+@import url(./blocks/half-block.css);
 @import url(./blocks/symptom-input.css);
 @import url(./blocks/priority-level.css);
 @import url(./blocks/register-form.css);
+@import url(./blocks/config-popup.css);
 
 /* Elements */
 @import url(./elements/temperature.css);

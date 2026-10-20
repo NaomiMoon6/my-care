@@ -27,6 +27,31 @@
   animation: ecg-scroll 2.5s linear infinite;
 }
 
+.ecg__result{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+
+  background-color: rgb(207, 230, 250);
+  border: 2px solid aliceblue;
+  border-radius: 50px;
+
+  font-size: 25px;
+  font-family: "Poppins";
+  font-weight: 600;
+
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 15px;
+  margin: 0;
+  outline: none;
+}
+
 @keyframes ecg-scroll {
   0% {
     transform: translateX(0%);

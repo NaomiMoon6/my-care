@@ -1,60 +1,35 @@
 .symptom-input__block_temperature{
   display: flex;
+  flex-direction: row;
+}
+
+.temperature-input-box{
+  display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  max-height: 400px;
 }
 
-.temperature__toggle-box{
+.temperature-value{
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.temperature__label{
-  font-weight: 300;
-  font-size: 20px;
-  color: navy;
-  margin: 10px;
-}
-
-.temperature__display{
-  display: flex;
-  border-radius: 10px;
-  border-bottom: 2px solid aliceblue;
-  box-shadow: 0 8px 6px -6px #a9c5cc;
-  align-items: center;
-  min-width: 150px;
-}
-
-.temperature__value{
-  display: inline-block;
-  background: none;
-  border: none;
-  min-width: 70px;
-  max-width: 100px;
-  min-height: 50px;
-  text-align: center;
-
-  font-weight: 700;
-  font-size: 30px;
-  color: navy;
-}
-
-.temperature__celcius{
-  font-weight: 700;
-  font-size: 30px;
-  color: navy;
-  display: inline;
+  
+  margin: 0;
+  max-height: 400px;
 }
 
 .temperature-slider {
   position: absolute;
-  top: 240px;
+  top: 150px;
 
   writing-mode: vertical-lr;
   direction: rtl; /* Puts min (0) at the bottom and max (100) at the top */
   width: 12px;
-  height: 200px;
+  height: 210px;
   -webkit-appearance: none;
   appearance: none;
   border-radius: 6px;
@@ -98,5 +73,6 @@
 }
 
 .thermometer{
-  width: 400px;
+  width: 200px;
+  height: 400px;
 }

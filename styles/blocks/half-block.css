@@ -1,0 +1,7 @@
+.half-block{
+  min-width: 400px;
+  min-height: 400px;
+
+  max-width: 550px;
+  max-height: 550px;
+}

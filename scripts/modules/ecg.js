@@ -22,3 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Render initial image if a value is selected by default
   updateEcgWave(ecgSelect.value);
 });
+
+// Change the selection to the option with value="orange"
+ecgSelect.value = "orange"; 
