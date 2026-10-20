@@ -108,174 +108,170 @@
     </nav>
   </header>
   <main class="page">
-    <div class="symptom-input"> 
-      <form method="post">
-      <div id="symptoms-block" class="half-block symptom-input__block symptom-input__block_questions">
-        Sintomas
-      </div>
+    <div id="symptoms-block" class="half-block symptom-input__block symptom-input__block_questions">
+      Sintomas
+    </div>
 
-      <div id="temp-block" class="half-block symptom-input__block symptom-input__block_temperature hidden">
-        <div class="temperature-input-box">
-          <input id="temperature-slider" type="range" min="36" max="40" value="37" step="0.1" class="temperature-slider">
-          <img src="thermometer.svg" class="thermometer">
-        </div>
+    <div id="temp-block" class="half-block symptom-input__block symptom-input__block_temperature hidden">
+      <div class="temperature-input-box">
+      <input id="temperature-slider" type="range" min="36" max="40" value="37" step="0.1" class="temperature-slider">
+      <img src="thermometer.svg" class="thermometer">
+    </div>
 
-        <div class="temperature-value">
-          <label for="temperature-input" class="value__label">Temperatura Corporal:</label>
-            <div class="value__display">
-              <input 
-                type="number" 
-                id="temperature-input" 
-                name="temperature-input" 
-                min="30.0" 
-                max="40.0" 
-                step="0.1" 
-                value="37.0" 
-                class="value">
-              <p class="value__unit">°C</p>
-            </div>
-        </div>
-      </div>
-
-      <div id="glucose-block" class="half-block symptom-input__block symptom-input__block_glucose hidden">
-
-        <label for="glucose-input" class="value__label">Glicose:</label>
+    <div class="temperature-value">
+      <label for="temperature-input" class="value__label">Temperatura Corporal:</label>
         <div class="value__display">
           <input 
             type="number" 
-            id="glucose-input" 
-            name="glucose-input" 
+            id="temperature-input" 
+            name="temperature-input" 
             min="30.0" 
-            max="150.0" 
+            max="40.0" 
             step="0.1" 
-            value="100" 
+            value="37.0" 
             class="value">
-          <p class="value__unit">mmol/L</p>
+          <p class="value__unit">°C</p>
         </div>
-      </div>
+    </div>
+  </div>
 
-      <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_oxygen hidden">
+  <div id="glucose-block" class="half-block symptom-input__block symptom-input__block_glucose hidden">
 
-        <label for="saturation-input" class="value__label">Saturação de Oxigênio:</label>
-        <div class="value__display">
-          <input 
-            type="number" 
-            id="saturation-input" 
-            name="saturation-input" 
-            min="0" 
-            max="100" 
-            step="1" 
-            value="100" 
-            class="value">
-          <p class="value__unit">%</p>
-        </div>
-      </div>
+    <label for="glucose-input" class="value__label">Glicose:</label>
+    <div class="value__display">
+      <input 
+        type="number" 
+        id="glucose-input" 
+        name="glucose-input" 
+        min="30.0" 
+        max="150.0" 
+        step="0.1" 
+        value="100" 
+        class="value">
+      <p class="value__unit">mmol/L</p>
+    </div>
+  </div>
 
-      <div id="hr-block" class="half-block symptom-input__block symptom-input__block_heart-rate hidden">
+  <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_oxygen hidden">
 
-        <label for="hr-input" class="value__label"> Batimentos:</label>
-        <div class="value__display">
-          <input 
-            type="number" 
-            id="hr-input" 
-            name="hr-input" 
-            min="30" 
-            max="250" 
-            step="1" 
-            value="60" 
-            class="value">
-          <p class="value__unit">bpm</p>
-        </div>
-      </div>
+    <label for="saturation-input" class="value__label">Saturação de Oxigênio:</label>
+    <div class="value__display">
+      <input 
+        type="number" 
+        id="saturation-input" 
+        name="saturation-input" 
+        min="0" 
+        max="100" 
+        step="1" 
+        value="100" 
+        class="value">
+      <p class="value__unit">%</p>
+    </div>
+  </div>
 
-      <div id="bp-block" class="half-block symptom-input__block symptom-input__block_blood-pressure hidden">
-        Pressão Arterial
+  <div id="hr-block" class="half-block symptom-input__block symptom-input__block_heart-rate hidden">
 
-        <label for="bp-systolic-input" class="value__label"> Sístole:</label>
-        <div class="value__display">
-          <input 
-            type="number" 
-            id="bp-systolic-input" 
-            name="bp-systolic-input" 
-            min="0" 
-            max="300" 
-            step="1" 
-            value="110" 
-            class="value">
-          <p class="value__unit">mm Hg</p>
-        </div>
+    <label for="hr-input" class="value__label"> Batimentos:</label>
+    <div class="value__display">
+      <input 
+        type="number" 
+        id="hr-input" 
+        name="hr-input" 
+        min="30" 
+        max="250" 
+        step="1" 
+        value="60" 
+        class="value">
+      <p class="value__unit">bpm</p>
+    </div>
+  </div>
 
-        <label for="bp-diastolic-input" class="value__label"> Diástole:</label>
-        <div class="value__display">
-          <input 
-            type="number" 
-            id="bp-diastolic-input" 
-            name="bp-diastolic-input" 
-            min="0" 
-            max="300" 
-            step="1" 
-            value="70" 
-            class="value">
-          <p class="value__unit">mm Hg</p>
-        </div>
-      </div>
-      
-      <div id="ecg-block" class="half-block symptom-input__block symptom-input__block_ecg hidden">
-        <label for="ecg__result" class="value__label">Selecione o resultado do eletrocardiograma mais recente:</label>
-        <select id="ecg__result" class="ecg__result">
-          <option value="sinus-rythm">Ritimo Sinuvial</option>
-          <option value="bradycardia">Bradicardia</option>
-          <option value="tachycardia">Taquicardia</option>
-          <option value="afib">Fibrilação Atrial</option>
-          <option value="atrial-flutter">Flutter Atrial (ou Flutter Auricular)</option>
-          <option value="pvc">Extrassístole Ventricular (ou Contração Ventricular Prematura)</option>
-          <option value="qt-prolongation">Prolongamento do Intervalo QT (ou Intervalo QT Longo)</option>
-          <option value="vtach">Taquicardia ventricular</option>
-        </select>
+  <div id="bp-block" class="half-block symptom-input__block symptom-input__block_blood-pressure hidden">
+    Pressão Arterial
 
-        <div class="ecg">
-          <div class="ecg__wave"><img src="assets/ecg/afib.svg"></div>
-
-          <div class="ecg__wave ecg__wave--clone"></div>
-        </div>
-      </div>
-
-      <div id="cycle-block" class="half-block symptom-input__block symptom-input__block_menstruation hidden">
-        Menstruação
-      </div>
-      </form>
+    <label for="bp-systolic-input" class="value__label"> Sístole:</label>
+    <div class="value__display">
+      <input 
+        type="number" 
+        id="bp-systolic-input" 
+        name="bp-systolic-input" 
+        min="0" 
+        max="300" 
+        step="1" 
+        value="110" 
+        class="value">
+      <p class="value__unit">mm Hg</p>
     </div>
 
-    <div class="priority-level"> 
-      <img src="heart.svg" class="heart">
-      <h2 class="priority-level__title">Nível de risco:</h2>
-      <h3 class="priority-level__value">Baixo</h3>
+    <label for="bp-diastolic-input" class="value__label"> Diástole:</label>
+    <div class="value__display">
+      <input 
+        type="number" 
+        id="bp-diastolic-input" 
+        name="bp-diastolic-input" 
+        min="0" 
+        max="300" 
+        step="1" 
+        value="70" 
+        class="value">
+      <p class="value__unit">mm Hg</p>
     </div>
-  </main>
-  <footer class="footer">
-    <button id="button-config" class="medium-button button-blue">
-      Configurações
-    </button>
+  </div>
+  
+  <div id="ecg-block" class="half-block symptom-input__block symptom-input__block_ecg hidden">
+    <label for="ecg__result" class="value__label">Selecione o resultado do eletrocardiograma mais recente:</label>
+    <select id="ecg__result" class="ecg__result">
+      <option value="sinus-rythm">Ritimo Sinuvial</option>
+      <option value="bradycardia">Bradicardia</option>
+      <option value="tachycardia">Taquicardia</option>
+      <option value="afib">Fibrilação Atrial</option>
+      <option value="atrial-flutter">Flutter Atrial (ou Flutter Auricular)</option>
+      <option value="pvc">Extrassístole Ventricular (ou Contração Ventricular Prematura)</option>
+      <option value="qt-prolongation">Prolongamento do Intervalo QT (ou Intervalo QT Longo)</option>
+      <option value="vtach">Taquicardia ventricular</option>
+    </select>
 
-     <button id="button-report" class="medium-button button-red">
-      Exportar Formulário
-    </button>
+    <div class="ecg">
+      <div class="ecg__wave"><img src="assets/ecg/afib.svg"></div>
 
-    <div class="config-popup-bg hidden">
-      <div class="config-popup">
-        <button class="close-button">
-          X
-        </button>
-
-        <button id="button-logout" class="medium-button">
-          Sair
-        </button>
-
-        <button id="button-delete" class="medium-button">
-          Deletar Dados
-        </button>
-      </div>
+      <div class="ecg__wave ecg__wave--clone"></div>
     </div>
+  </div>
+
+  <div id="cycle-block" class="half-block symptom-input__block symptom-input__block_menstruation hidden">
+    Menstruação
+  </div>
+    
+  <div class="half-block priority-level"> 
+    <img src="heart.svg" class="heart">
+    <h2 class="priority-level__title">Nível de risco:</h2>
+    <h3 class="priority-level__value">Baixo</h3>
+  </div>
+</main>
+<footer class="footer">
+  <button id="button-config" class="medium-button button-blue">
+    Configurações
+  </button>
+
+    <button id="button-report" class="medium-button button-red">
+    Exportar Formulário
+  </button>
+
+  <div class="config-popup-bg hidden">
+    <div class="config-popup">
+      <button class="close-button">
+        X
+      </button>
+
+      <button id="button-logout" class="medium-button">
+        Sair
+      </button>
+
+      <button id="button-delete" class="medium-button">
+        Deletar Dados
+      </button>
+    </div>
+  </div>
   </footer>
 
   <script type="module" src="./scripts/main.js"></script>

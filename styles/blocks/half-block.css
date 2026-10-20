@@ -2,6 +2,9 @@
   min-width: 400px;
   min-height: 400px;
 
-  max-width: 550px;
-  max-height: 550px;
+  max-width: 600px;
+  max-height: 500px;
+
+  width: 100% !important;
+  height: 100% !important;
 }
