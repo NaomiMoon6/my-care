@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
   
-  const imgTag = `<img src="/assets/ecg/${value}.svg" alt="ECG: ${value}">`;
+  const imgTag = `<img src="assets/ecg/${value}.svg" alt="ECG: ${value}">`;
   waveContainers.forEach(c => c.innerHTML = imgTag);
   };
 
