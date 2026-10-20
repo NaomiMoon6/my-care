@@ -1,17 +1,17 @@
 /* Base */
-@import url(/styles/base/reset.css);
-@import url(/styles/base/fonts.css);
-@import url(/styles/base/page.css);
-@import url(/styles/base/inputs.css);
+@import url(./base/fonts.css);
+@import url(./base/fonts.css);
+@import url(./base/page.css);
+@import url(./base/inputs.css);
 
 /* Blocks */
-@import url(/styles/blocks/header.css);
-@import url(/styles/blocks/footer.css);
-@import url(/styles/blocks/symptom-input.css);
-@import url(/styles/blocks/priority-level.css);
-@import url(/styles/blocks/register-form.css);
+@import url(./blocks/header.css);
+@import url(./blocks/footer.css);
+@import url(./blocks/symptom-input.css);
+@import url(./blocks/priority-level.css);
+@import url(./blocks/register-form.css);
 
 /* Elements */
-@import url(/styles/elements/temperature.css);
-@import url(/styles/elements/ecg.css);
-@import url(/styles/elements/buttons.css);
+@import url(./elements/temperature.css);
+@import url(./elements/ecg.css);
+@import url(./elements/buttons.css);
