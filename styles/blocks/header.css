@@ -7,13 +7,13 @@
 }
 
 .header__welcome{
-  font-family: "Poppins-Bold";
+  font-weight: 700;
   font-size: 70px;
   color: navy;
 }
 
 .header__question{
-  font-family: "Poppins-Bold";
+  font-weight: 700;
   font-size: 50px;
   color: #D16D6A;
   align-self: flex-end;

@@ -5,7 +5,8 @@ body{
   background-size: cover;
   min-height: 100vh;
 
-  font-family: "Poppins-Regular";
+  font-family: "Poppins";
+  font-weight: 500;
   overflow: hidden;
 }
 

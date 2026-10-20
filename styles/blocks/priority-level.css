@@ -12,13 +12,13 @@
 }
 
 .priority-level__title{
-  font-family: "Poppins-Light";
+  font-weight: 300;
   font-size: 30px;
   color: #D16D6A;
 }
 
 .priority-level__value{
-  font-family: "Poppins-Black";
+  font-weight: 900; 
   font-size: 80px;
   text-transform: uppercase;
   color: #D16D6A;
