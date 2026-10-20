@@ -1,0 +1,102 @@
+.symptom-input__block_temperature{
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature__toggle-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.temperature__label{
+  font-family: "Poppins-Light";
+  font-size: 20px;
+  color: navy;
+  margin: 10px;
+}
+
+.temperature__display{
+  display: flex;
+  border-radius: 10px;
+  border-bottom: 2px solid aliceblue;
+  box-shadow: 0 8px 6px -6px #a9c5cc;
+  align-items: center;
+  min-width: 150px;
+}
+
+.temperature__value{
+  display: inline-block;
+  background: none;
+  border: none;
+  min-width: 70px;
+  max-width: 100px;
+  min-height: 50px;
+  text-align: center;
+
+  font-family: "Poppins-Bold";
+  font-size: 30px;
+  color: navy;
+}
+
+.temperature__celcius{
+  font-family: "Poppins-Bold";
+  font-size: 30px;
+  color: navy;
+  display: inline;
+}
+
+.temperature-slider {
+  position: absolute;
+  top: 240px;
+
+  writing-mode: vertical-lr;
+  direction: rtl; /* Puts min (0) at the bottom and max (100) at the top */
+  width: 12px;
+  height: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+
+  /* Dynamic CSS Gradient Track */
+  background: linear-gradient(
+    to top,
+    #34C759 0%,                  /* Green at bottom */
+    #FF9500 50%,                 /* Yellow at middle */
+    #FF3B30 100%                 /* Red at top */
+  );
+  
+  /* Mask to show gradient only on the filled portion (bottom up to current value) */
+  background-size: 100% var(--percent, 50%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #E5E5EA; /* Unfilled track background color */
+}
+
+/* Custom Thumb Styling */
+.gradient-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid #E5E5EA;
+}
+
+.gradient-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid #E5E5EA;
+}
+
+.thermometer{
+  width: 400px;
+}

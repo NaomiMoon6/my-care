@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Triagem</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
+<body>
+  <div class="start-popup">
+    <div class="welcome-popup">
+      <h1 class="welcome-poppup__title">
+        Olá, seja bem vindo
+      </h1>
+
+      <h2 class="welcome-poppup__paragraph">
+        Esse é seu primeiro atendimento conosco?
+      </h2>
+
+      <div class="welcome-poppup__button-divider">
+      <button id="button-yes" class="big-button">
+        Sim
+      </button>
+
+      <button id="button-no" class="big-button">
+        Não
+      </button>
+      </div>
+    </div>
+
+    <div class="register-form-popup hidden">
+      <form class="register-form">
+        <div id="form-field-1" class="">
+          <label for="name" class="register-input-label">
+            Qual o seu nome?
+          </label>
+          <input id="name" type="text" class="register-input" minlength="3" maxlength="50" required>
+        </div>
+
+        <div id="form-field-2" class="hidden">
+          <label for="cpf" class="register-input-label">
+            Qual o seu CPF?
+          </label>
+          <input id="cpf" type="number" class="register-input" minlength="11" maxlength="11" required>
+        </div>
+        
+        <div id="form-field-3" class="hidden">
+          <label for="phone" class="register-input-label">
+            Qual seu telefone?
+          </label>
+          <input id="phone" type="number" class="register-input" minlength="11" maxlength="11" required>
+        </div>
+
+        <div id="form-field-4" class="hidden">
+          <label for="email" class="register-input-label">
+            Qual seu e-mail?
+          </label>
+          <input id="email" type="email" class="register-input" maxlength="50" required>
+        </div>
+
+        <div id="form-field-5" class="hidden">
+          <label for="birthdate" class="register-input-label">
+            Qual a data do seu nascimento?
+          </label>
+          <input id="birthdate" type="date" class="register-input" required>
+        </div>
+      </form>
+      <button class="big-button register-form-next">Continuar</button>
+    </div>
+  </div>
+  
+  <header class="header">
+    <h1 class="header__welcome"></h1>
+    <h2 class="header__question">Como você está se sentindo hoje?</h2>
+
+    <nav class="nav">
+      <button data-target="symptoms-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/symptoms.svg">
+      </button>
+
+      <button data-target="temp-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/themometer.svg">
+      </button>
+
+      <button data-target="hr-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/hr.svg">
+      </button>
+
+      <button data-target="bp-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/bp.svg">
+      </button>
+
+      <button data-target="ecg-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/ecg.svg">
+      </button>
+
+      <button data-target="saturation-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/spo2.svg">
+      </button>
+
+      <button data-target="glucose-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/glucose.svg">
+      </button>
+
+      <button data-target="cycle-block" class="nav__button">
+        <img class="nav__icon" src="/assets/icons/menstruation.svg">
+      </button>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="symptom-input"> 
+      <form>
+      <div id="symptom-block" class="symptom-input__block symptom-input__block_questions">
+        Sintomas
+      </div>
+
+      <div id="temp-block" class="symptom-input__block symptom-input__block_temperature hidden">
+        <div class="symptom-input__inputs">
+          <label for="temperature__value" class="temperature__label">Temperatura Corporal:</label>
+          <div class="temperature__display">
+            <input 
+              type="number" 
+              id="body-temp" 
+              name="body-temp" 
+              min="36.0" 
+              max="40.0" 
+              step="0.1" 
+              value="37.0" 
+              required
+              class="temperature__value">
+            <p class="temperature__celcius">°C</p>
+          </div>
+        
+          <input id="temperature-slider" type="range" min="36" max="40" value="37" step="0.1" class="temperature-slider">
+          <img src="thermometer.svg" class="thermometer">
+        </div>
+      </div>
+
+      <div id="hr-block" class="symptom-input__block symptom-input__block_heart-rate hidden">
+        Batimentos
+      </div>
+
+      <div id="bp-block" class="symptom-input__block symptom-input__block_blood-pressure hidden">
+        Pressão Arterial
+      </div>
+      
+      <div id="ecg-block" class="symptom-input__block symptom-input__block_ecg hidden">
+        <label for="ecg__result">Selecione o resultado do eletrocardiograma mais recente:</label>
+        <select id="ecg__result" class="ecg__result">
+          <option value="sinus-rythm">Ritimo Sinuvial</option>
+          <option value="bradycardia">Bradicardia</option>
+          <option value="tachycardia">Taquicardia</option>
+          <option value="afib">Fibrilação Atrial</option>
+          <option value="atrial-flutter">Flutter Atrial (ou Flutter Auricular)</option>
+          <option value="pvc">Extrassístole Ventricular (ou Contração Ventricular Prematura)</option>
+          <option value="qt-prolongation">Prolongamento do Intervalo QT (ou Intervalo QT Longo)</option>
+          <option value="vtach">Taquicardia ventricular</option>
+        </select>
+
+        <div class="ecg">
+          <div class="ecg__wave"><img src="/assets/ecg/afib.svg"></div>
+
+          <div class="ecg__wave ecg__wave--clone"></div>
+        </div>
+      </div>
+
+      <div id="saturation-block" class="symptom-input__block symptom-input__block_oxygen hidden">
+        Saturação de Oxigênio
+      </div>
+
+      <div id="glucose-block" class="symptom-input__block symptom-input__block_glucose hidden">
+        Glicose
+      </div>
+
+      <div id="cycle-block" class="symptom-input__block symptom-input__block_menstruation hidden">
+        Menstruação
+      </div>
+      </form>
+    </div>
+
+    <div class="priority-level"> 
+      <img src="heart.svg" class="heart">
+      <h2 class="priority-level__title">Nível de risco:</h2>
+      <h3 class="priority-level__value">Baixo</h3>
+    </div>
+  </main>
+  <footer class="footer">
+    <button id="button-logout" class="medium-button">
+      Sair
+    </button>
+
+    <button id="button-delete" class="medium-button">
+      Deletar Dados
+    </button>
+  </footer>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
+

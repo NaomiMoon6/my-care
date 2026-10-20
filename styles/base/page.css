@@ -1,0 +1,21 @@
+body{
+  background: #e0f3ff;
+  background: linear-gradient(90deg, rgb(230, 243, 251) 0%, rgba(250, 242, 255, 1) 50%, rgb(254, 234, 234) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  font-family: "Poppins-Regular";
+  overflow: hidden;
+}
+
+.page{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px 150px;
+}
+
+.hidden {
+  display: none !important;
+}

@@ -1,0 +1,37 @@
+.symptom-input__block_ecg{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 500px;
+}
+
+.ecg{
+  background-image: url(/assets/ecg/ecg-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: 150px;
+  background-color: rgba(178, 34, 34, 0.1);
+  border: 2px solid #cca9a9;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.ecg__wave{
+  filter: drop-shadow(0 0 6px #cca9a9) drop-shadow(0 0 2px #cca9a9);
+  animation: ecg-scroll 2.5s linear infinite;
+}
+
+@keyframes ecg-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33%);
+  }
+}

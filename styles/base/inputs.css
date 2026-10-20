@@ -1,0 +1,40 @@
+/* 1. The Background Track */
+.temperature__check {
+  appearance: none;          /* Removes default checkbox styling */
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;       /* Makes it pill-shaped */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+
+/* 2. The Sliding Knob */
+.temperature__check::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;        /* Makes it a perfect circle */
+  transition: transform 0.2s; /* Smooth sliding animation */
+}
+
+/* 3. The "On" State (Checked) */
+.temperature__check:checked {
+  background: #007bff;       /* Turns track blue when checked */
+}
+
+.temperature__check:checked::before {
+  transform: translateX(20px); /* Slides the knob to the right */
+}
+
+.temperature__value::-webkit-outer-spin-button,
+.temperature__value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
