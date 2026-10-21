@@ -24,6 +24,10 @@
 
   font-size: 30px;
   font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .medium-button:hover{
@@ -38,9 +42,6 @@
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 10px #a9c5cc;
   background: radial-gradient(circle, rgba(216, 220, 255, 0.1), rgba(76, 144, 240, 0.1));
-  padding: 15px;
-
-  max-height: 500px;
 }
 
 .button-red{
@@ -72,4 +73,10 @@
 .close-button:hover{
   box-shadow: none;
   background-color: rgba(218, 215, 227, 0.328);
+}
+
+.button__icon{
+  width: 50px;
+  opacity: 0.7;
+  margin-right: 15px;
 }

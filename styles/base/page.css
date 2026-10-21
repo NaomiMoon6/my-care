@@ -14,9 +14,9 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 30px;
+  place-items: center;
+
   padding: 30px 100px;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 

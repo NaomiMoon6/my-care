@@ -1,13 +1,15 @@
 .symptom-input__block_temperature{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .temperature-input-box{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
 
   max-height: 400px;
 }
