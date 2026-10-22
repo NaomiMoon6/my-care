@@ -20,6 +20,8 @@ function updateMap(){
     {mapDisplay.style.borderColor = "#ecf0cb"; mapDisplay.style.backgroundColor = "#e4e874";}
   else if (map <= 60) 
     {mapDisplay.style.borderColor = "#f3c7c7"; mapDisplay.style.backgroundColor = "#e87474";}
+
+  if (diastolic > systolic) {mapDisplay.style.borderColor = "#f3c7c7"; mapDisplay.style.backgroundColor = "#e87474";}
 }
 
 systolicInput.addEventListener("input", updateMap);

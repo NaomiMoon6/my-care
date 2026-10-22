@@ -1,0 +1,179 @@
+{
+  "Vermelho": {
+    "Tórax": [
+      "dor forte no peito com aperto intenso",
+      "parada cardiorrespiratória",
+      "falta de ar extrema com lábios roxos",
+      "sensação de sufocamento súbito"
+    ],
+    "Cabeça": [
+      "inconsciência profunda sem resposta",
+      "convulsão contínua ou em série sem recuperar a consciência",
+      "paralisia súbita de metade do corpo com fala enrolada",
+      "trauma craniano grave com perda de consciência",
+      "confusão mental aguda com delírio violento"
+    ],
+    "Abdômen": [
+      "dor abdominal lancinante com desmaio e pressão muito baixa",
+      "hemorragia digestiva maciça com desmaio"
+    ],
+    "Corpo Todo": [
+      "reação alérgica grave com fechamento da garganta e falta de ar",
+      "sangramento profuso incontrolável por ferimento grave",
+      "choque elétrico de alta voltagem com parada",
+      "queimadura de terceiro grau em grande extensão do corpo"
+    ],
+    "Pescoço": [
+      "asfixia total por engasgamento",
+      "inchaço grave na garganta impedindo a passagem de ar",
+      "trauma cervical grave com incapacidade respiratória"
+    ]
+  },
+  "Laranja": {
+    "Tórax": [
+      "dor no peito irradiando para o braço esquerdo ou mandíbula",
+      "falta de ar moderada a grave com esforço respiratório visível",
+      "batimento cardíaco extremamente acelerado com tontura"
+    ],
+    "Cabeça": [
+      "dor de cabeça súbita e insuportável (pior da vida)",
+      "confusão mental progressiva ou desorientação no tempo",
+      "queimadura química grave nos olhos com perda de visão",
+      "trauma ocular com sangramento interno",
+      "perda súbita da visão em um dos olhos"
+    ],
+    "Abdômen": [
+      "dor abdominal muito forte, súbita e persistente",
+      "vômito com sangue vivo em grande quantidade",
+      "fezes com sangue escuro em grande volume",
+      "retenção urinária completa há mais de 12 horas com dor"
+    ],
+    "Corpo Todo": [
+      "febre muito alta em recém-nascidos ou imunossuprimidos",
+      "reação alérgica com inchaço generalizado no rosto ou lábios",
+      "queimadura de segundo grau extensa no rosto, mãos ou tronco",
+      "picada de cobra ou animal peçonhento com sintomas sistêmicos",
+      "sinais de infecção generalizada (febre alta com tremores e confusão)",
+      "manchas roxas que surgem rapidamente pelo corpo"
+    ],
+    "Membros": [
+      "fratura exposta com osso visível",
+      "sangramento profuso em braços ou pernas",
+      "perda de sensibilidade, frio e palidez repentina em um membro",
+      "trauma grave na coluna com perda de movimento nas pernas"
+    ],
+    "Psiquiátrico": [
+      "agitação psicomotora extrema com risco iminente de agressão",
+      "tentativa de suicídio recente com ingestão de substâncias",
+      "surto psicótico agudo com alucinações graves"
+    ]
+  },
+  "Amarelo": {
+    "Abdômen": [
+      "dor abdominal moderada a forte que não passa",
+      "vômitos repetidos com início de desidratação",
+      "diarreia intensa com sinais de perda de líquidos",
+      "constipação severa há vários dias com dor forte"
+    ],
+    "Cabeça": [
+      "dor de cabeça forte que não cede com remédios comuns",
+      "tontura intensa acompanhada de vertigem e vômitos",
+      "dor de ouvido muito forte com secreção ou febre"
+    ],
+    "Garganta": [
+      "dor de garganta intensa com dificuldade moderada para engolir e placas",
+      "perda auditiva súbita em um ouvido"
+    ],
+    "Tórax": [
+      "falta de ar leve a moderada (crise de asma controlada)",
+      "tosse persistente acompanhada de dor no peito ao respirar",
+      "chiado no peito moderado sem melhora com bombinha"
+    ],
+    "Corpo Todo": [
+      "febre alta isolada sem foco evidente",
+      "urticária generalizada pelo corpo sem falta de ar",
+      "suspeita de dengue com dores intensas no corpo",
+      "herpes zoster com dor intensa e bolhas localizadas"
+    ],
+    "Membros": [
+      "entorse grave de tornozelo ou joelho com inchaço e incapacidade de pisar",
+      "dor lombar aguda e intensa (travamento severo das costas)",
+      "corte profundo em membros que necessita de pontos",
+      "suspeita de fratura fechada em braço ou perna com dor intensa",
+      "luxação articular (ombro ou dedo fora do lugar)"
+    ],
+    "Urinário": [
+      "dor muito forte ao urinar com sangue visível na urina",
+      "dor lombar intensa associada a náuseas e febre",
+      "cólica renal intensa com dor irradiada para as costas"
+    ]
+  },
+  "Verde": {
+    "Cabeça": [
+      "dor de cabeça leve a moderada que melhora com repouso",
+      "dor de ouvido leve a moderada",
+      "vermelhidão, coceira ou secreção nos olhos (conjuntivite leve)",
+      "presença de corpo estranho superficial no olho (poeira, cílio)",
+      "visão embaçada intermitente sem dor"
+    ],
+    "Garganta": [
+      "dor de garganta leve sem dificuldade para engolir",
+      "coriza constante, espirros e congestão nasal (resfriado)",
+      "tosse seca ou com catarro claro sem falta de ar",
+      "sangramento nasal leve e esporádico"
+    ],
+    "Abdômen": [
+      "diarreia leve sem sinais de desidratação",
+      "náusea leve ou sensação de estômago cheio",
+      "azia, queimação ou indigestão persistente",
+      "gases em excesso com cólica abdominal leve"
+    ],
+    "Corpo Todo": [
+      "febre baixa (estado febril)",
+      "coceira localizada ou alergia leve na pele",
+      "pequenas picadas de inseto com vermelhidão local",
+      "cortes superficiais, arranhões ou escoriações simples",
+      "queimaduras solares leves na pele",
+      "micoses superficiais na pele ou unhas com coceira"
+    ],
+    "Membros": [
+      "dor muscular leve após exercício físico ou esforço",
+      "torcicolo leve com rigidez moderada no pescoço",
+      "dor articular crônica sem inchaço agudo ou vermelhidão",
+      "cãibras musculares noturnas frequentes",
+      "dor leve nos pés devido ao uso prolongado de calçados"
+    ]
+  },
+  "Azul": {
+    "Corpo Todo": [
+      "unha encravada sem sinais de infecção profunda ou pus",
+      "verrugas cutâneas ou lesões de pele antigas",
+      "queda de cabelo crônica",
+      "manchas na pele antigas sem alteração recente",
+      "ressecamento extremo da pele (xerose)",
+      "cicatrizes antigas com coceira leve"
+    ],
+    "Serviços": [
+      "solicitação ou renovação de receita médica de uso contínuo",
+      "emissão de atestado médico de rotina para atividades físicas",
+      "retirada de pontos de cirurgia anterior sem complicações",
+      "solicitação de exames de rotina sem sintomas agudos",
+      "preenchimento de formulários médicos para trabalho ou seguro",
+      "vacinação de rotina sem reações"
+    ],
+    "Cabeça": [
+      "acne leve ou espinhas isoladas",
+      "afta pequena na boca com dor leve",
+      "rouquidão crônica há várias semanas sem dor ou falta de ar",
+      "gengivite leve com sangramento ao escovar os dentes",
+      "sensibilidade dentária crônica leve"
+    ],
+    "Membros": [
+      "calos dolorosos nos pés",
+      "dor crônica leve e estável em articulações que dura meses",
+      "formigamento leve e intermitente em extremidades",
+      "fadiga crônica leve sem outros sintomas associados",
+      "rigidez matinal leve que passa rápido"
+    ]
+  }
+}
