@@ -32,7 +32,7 @@ buttonReport.addEventListener("click", exportReport);
 buttonLogOut.addEventListener("click", function() {
 
   startPopup.classList.remove("hidden");
-  location.reload();
+  configPopup.classList.add("hidden");
 })
 
 buttonDelete.addEventListener("click", function() {

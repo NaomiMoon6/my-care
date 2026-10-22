@@ -16,6 +16,8 @@ if(!patient.name){
   loggedIn = true;
 }
 
+if (loggedIn) {startPopup.classList.toggle("hidden");}
+
 buttonNo.addEventListener("click", function() {
   if(loggedIn == false){alert("Nenhum login encontrado!"); return;}
 
