@@ -2,6 +2,7 @@ import './views/mainPage.js';
 import './views/welcomePopup.js';
 import './views/registerForm.js';
 
+import './modules/clampInput.js';
 import './modules/symptoms.js';
 import './modules/glucose.js';
 import './modules/temperature.js';

@@ -28,3 +28,17 @@ input.addEventListener('input', (e) => {
 });
 
 setProgress(input.value);
+
+function stepSaturation(delta) {
+  const current = parseInt(input.value) || 0;
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.value = Math.min(Math.max(current + delta, min), max);
+
+  input.dispatchEvent(new Event('input', { bubbles: true }));
+  setProgress(input.value);
+  changeColor();
+}
+
+document.getElementById('saturation-minus').addEventListener('click', () => stepSaturation(-1));
+document.getElementById('saturation-plus').addEventListener('click', () => stepSaturation(1));

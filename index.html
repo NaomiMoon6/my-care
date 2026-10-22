@@ -30,7 +30,7 @@
     </div>
 
     <div class="register-form-popup hidden">
-      <form class="register-form" method="post">
+      <form class="register-form">
         <div id="form-field-1" class="">
           <label for="name" class="register-input-label">
             Qual o seu nome?
@@ -204,6 +204,10 @@
         <p class="value__unit" id="saturation-unit">%</p>
       </div>
     </div>
+    <div class="saturation-controls">
+      <button type="button" id="saturation-minus" class="saturation-step" aria-label="Diminuir 1%">−</button>
+      <button type="button" id="saturation-plus" class="saturation-step" aria-label="Aumentar 1%">+</button>
+    </div>
   </div>
 
   <div id="hr-block" class="half-block symptom-input__block symptom-input__block_heart-rate hidden">
@@ -216,7 +220,7 @@
         type="number" 
         id="hr-input" 
         name="hr-input" 
-        min="30" 
+        min="10" 
         max="250" 
         step="1" 
         value="60" 
