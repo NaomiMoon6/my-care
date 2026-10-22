@@ -18,13 +18,13 @@
       </h2>
 
       <div class="welcome-poppup__button-divider">
-      <button id="button-yes" class="big-button">
-        Sim
-      </button>
+        <button id="button-yes" class="big-button">
+          Sim
+        </button>
 
-      <button id="button-no" class="big-button">
-        Não
-      </button>
+        <button id="button-no" class="big-button">
+          Não
+        </button>
       </div>
     </div>
 
@@ -148,8 +148,21 @@
         step="0.1" 
         value="100" 
         class="value">
-      <p class="value__unit">mmol/L</p>
+      <p class="value__unit">mg/dL</p>
     </div>
+    <label for="glucose-meal" class="value__label">Última refeição:</label>
+    <select id="glucose-meal" name="glucose-meal">
+      <option value="fasting">Em jejum (8h ou mais)</option>
+      <option value="post-meal">Comi há menos de 2 horas</option>
+      <option value="unknown">Não sei / outro</option>
+    </select>
+
+    <label for="glucose-diabetic" class="value__label">
+      <input type="checkbox" id="glucose-diabetic" name="glucose-diabetic">
+      Sou diabético(a)
+    </label>
+
+    <p id="glucose-risk" class="glucose-risk"></p>
   </div>
 
   <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_saturation hidden">
@@ -260,8 +273,17 @@
     </div>
   </div>
 
-  <div id="cycle-block" class="half-block symptom-input__block symptom-input__block_menstruation hidden">
-    Menstruação
+  <div id="cycle-block" class="half-block symptom-input__block symptom-input__block_cycle hidden">
+    <label class="value__label value__label_centered">Menstruação</label>
+
+    <p class="cycle__paragraph">
+      Sintomas relacionados ao ciclo menstrual não foram implementados na versão atual do protótipo.
+    </p>
+    <p class="cycle__paragraph">
+      <span class="red-span"><b class="bold">
+      Essa função será disponibilizada nas próximas atualizações
+      </span></b>
+    </p>
   </div>
     
   <div class="half-block priority-level"> 
@@ -287,7 +309,7 @@
         X
       </button>
 
-      <h1 class="config-popup__title">Sistema Web <span class="red-span">de Triagem</span></h1>
+      <h1 class="config-popup__title">Sistema Web <br class="hidden_break"><span class="red-span">de Triagem</span></h1>
       <h2 class="config-popup__subtitle">
         Protótipo desenvolvido por <b class="bold">Naomi Marra Marcondes</b>
         em conjunto com <b class="bold">José Pedro Silvério Assis</b> para a 
@@ -296,7 +318,7 @@
       </h2>
 
       <div class="config-popup__buttons">
-        <p class="config-popup__button-caption">
+        <p class="config-popup__button-caption config-popup__button-caption_hidden">
           Voltar para a tela de cadastro.
         </p>
 

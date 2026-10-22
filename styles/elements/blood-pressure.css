@@ -6,7 +6,7 @@
 }
 
 .bp-title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   color: navy;
   grid-column: span 2;
@@ -61,7 +61,7 @@
 
 @media (max-width: 600px) {
   .bp-title {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .bp-label {

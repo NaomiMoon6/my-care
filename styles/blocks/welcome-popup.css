@@ -36,4 +36,42 @@
 
   display: flex;
   justify-content: space-around;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .welcome-popup{
+    margin: 100px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .welcome-poppup__title{
+    font-size: 60px;
+  }
+
+  .welcome-poppup__paragraph{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-poppup__button-divider{
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-popup{
+    margin: 50px;
+  }
+  
+  .welcome-poppup__title{
+    font-size: 50px;
+  }
+
+  .welcome-poppup__paragraph{
+    font-size: 30px;
+  }
 }

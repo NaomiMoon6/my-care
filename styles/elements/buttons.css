@@ -97,11 +97,23 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .big-button{
+    padding: 30px;
+    max-width: 300px;
+    font-size: 30px;
+  }
+
   .medium-button{
     font-size: 15px;
 
     padding: 20px;
+  }
+
+  .close-button{
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
   }
 }
 

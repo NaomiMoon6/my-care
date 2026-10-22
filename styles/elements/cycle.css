@@ -1,0 +1,13 @@
+.symptom-input__block_cycle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 15px;
+}
+
+.cycle__paragraph{
+  text-align: center;
+  color: navy;
+}
