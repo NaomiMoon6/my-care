@@ -154,8 +154,8 @@
 
   <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_saturation hidden">
     <label for="saturation-input" class="value__label value__label_centered">Saturação de Oxigênio:</label>
-    <div class="progress-container">
-      <svg class="saturation-ring" width="360" height="360">
+    <div class="saturation-container">
+      <svg class="saturation-ring" viewBox="0 0 360 360">
         <defs>
           <linearGradient id="redToBlue" x1="100%" y1="0%" x2="70%" y2="50%">
             <stop offset="30%" stop-color="navy" />
@@ -168,26 +168,22 @@
           </linearGradient>
         </defs>
         <!-- Background Track -->
-        <circle class="saturation-track_big" cx="180" cy="180" r="160" />
-        <!-- Animated Progress Bar -->
-        <circle class="saturation-bar_big" cx="180" cy="180" r="150" />
-
-        <circle class="saturation-track_small" cx="180" cy="180" r="160" />
-        <!-- Animated Progress Bar -->
-        <circle class="saturation-bar_small" cx="180" cy="180" r="150" />
+          <circle class="saturation-track" cx="180" cy="180" r="160" />
+          <circle class="saturation-bar" cx="180" cy="180" r="160" />
       </svg>
-      <!-- Input in the center -->
       
-      <input 
-        type="number" 
-        id="saturation-input" 
-        name="saturation-input" 
-        min="0" 
-        max="100" 
-        step="1" 
-        value="100" 
-        class="value">
-      <p class="value__unit" id="saturation-unit">%</p>
+      <div class="saturation-readout">
+        <input 
+          type="number" 
+          id="saturation-input" 
+          name="saturation-input" 
+          min="0" 
+          max="100" 
+          step="1" 
+          value="100" 
+          class="value">
+        <p class="value__unit" id="saturation-unit">%</p>
+      </div>
     </div>
   </div>
 

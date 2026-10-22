@@ -5,53 +5,52 @@
   justify-content: space-between;
 }
 
-.progress-container {
+.saturation-container {
+  position: relative;          /* makes the readout position relative to the circle */
+  width: min(100%, 320px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.saturation-ring {
   width: 100%;
   height: 100%;
+  transform: rotate(-90deg);   /* start from the top */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.243));
+}
+
+.saturation-track,
+.saturation-bar {
+  fill: none;
+  stroke-width: 32;
+}
+
+.saturation-track { stroke: aliceblue; }
+
+.saturation-bar {
+  stroke: url(#blueToBlue);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s ease;
+}
+
+.saturation-readout {
+  position: absolute;
+  inset: 0;                    /* fill the container, then center the content */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media (max-width: 1100px) {
-  .saturation-ring {
-    transform: rotate(-90deg); /* Starts the progress from the top */
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.243));
-  }
-
-  .saturation-track_big,
-  .saturation-bar_big {
-    fill: none;
-    stroke-width: 32;
-  }
-
-  .saturation-track_big {
-    stroke: aliceblue;
-  }
-
-  .saturation-bar_big {
-    stroke: url(#blueToBlue);
-    stroke-linecap: round;
-    transition: stroke-dashoffset 0.35s ease;
-  }
-
-  .saturation-track_small, 
-  .saturation-bar_small {
-    display: none;
-  }
-}
-
-/* Center the input over the SVG */
-#saturation-input {
-  position: absolute;
-  right: 40%;
-  width: 150px;
-  max-width: 150px;
-  font-size: 50px;
-}
-
+#saturation-input,
 #saturation-unit {
-  position: absolute;
-  right: 30%;
+  position: static;            /* removes the old absolute positioning */
   font-size: 50px;
+}
+
+#saturation-input { width: 150px; max-width: 150px; }
+
+@media (max-width: 500px) {
+  #saturation-input,
+  #saturation-unit { font-size: 32px; }
+  #saturation-input { width: 100px; }
 }
