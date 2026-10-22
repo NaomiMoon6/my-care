@@ -9,17 +9,15 @@ const buttonNo = welcomePopup.querySelector("#button-no");
 let loggedIn = false;
 
 let patient = PatientManager.loadPatient();
-if(!patient.name || !patient.cpf){
+
+if(!patient.name){
   loggedIn = false;
-  alert("Nenhum login encontrado!");
 } else {
   loggedIn = true;
 }
 
-if(loggedIn){startPopup.classList.add("hidden");} 
-
 buttonNo.addEventListener("click", function() {
-  if(!patient.name || !patient.cpf){alert("Nenhum login encontrado!"); return;}
+  if(loggedIn == false){alert("Nenhum login encontrado!"); return;}
 
   startPopup.classList.toggle("hidden");
 })

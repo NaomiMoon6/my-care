@@ -40,7 +40,9 @@
   font-family: "Poppins";
   font-weight: 600;
 
-  width: 300px;
+  min-width: 300px;
+  width: min-content;
+  max-width: 500px;
 
   display: flex;
   justify-content: center;

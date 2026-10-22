@@ -114,8 +114,8 @@
 
     <div id="temp-block" class="half-block symptom-input__block symptom-input__block_temperature hidden">
       <div class="temperature-input-box">
-      <input id="temperature-slider" type="range" min="36" max="40" value="37" step="0.1" class="temperature-slider">
-      <img src="thermometer.svg" class="thermometer">
+      <input id="temperature-slider" type="range" min="30" max="42" value="37" step="0.1" class="temperature-slider">
+      <img src="assets/temperature/thermometer.svg" class="thermometer">
     </div>
 
     <div class="temperature-value">
@@ -126,7 +126,7 @@
             id="temperature-input" 
             name="temperature-input" 
             min="30.0" 
-            max="40.0" 
+            max="42.0" 
             step="0.1" 
             value="37.0" 
             class="value">
@@ -152,10 +152,28 @@
     </div>
   </div>
 
-  <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_oxygen hidden">
+  <div id="saturation-block" class="half-block symptom-input__block symptom-input__block_saturation hidden">
+    <label for="saturation-input" class="value__label value__label_centered">Saturação de Oxigênio:</label>
+    <div class="progress-container">
+      <svg class="progress-ring" width="360" height="360">
+        <defs>
+          <linearGradient id="redToBlue" x1="100%" y1="0%" x2="70%" y2="50%">
+            <stop offset="30%" stop-color="navy" />
+            <stop offset="100%" stop-color="#D16D6A" />
+          </linearGradient>
 
-    <label for="saturation-input" class="value__label">Saturação de Oxigênio:</label>
-    <div class="value__display">
+          <linearGradient id="blueToBlue" x1="100%" y1="0%" x2="70%" y2="50%">
+            <stop offset="30%" stop-color="#1d8beb" />
+            <stop offset="100%" stop-color="navy" />
+          </linearGradient>
+        </defs>
+        <!-- Background Track -->
+        <circle class="progress-ring__track" cx="180" cy="180" r="160" />
+        <!-- Animated Progress Bar -->
+        <circle class="progress-ring__bar" cx="180" cy="180" r="150" />
+      </svg>
+      <!-- Input in the center -->
+      
       <input 
         type="number" 
         id="saturation-input" 
@@ -165,13 +183,15 @@
         step="1" 
         value="100" 
         class="value">
-      <p class="value__unit">%</p>
+      <p class="value__unit" id="saturation-unit">%</p>
     </div>
   </div>
 
   <div id="hr-block" class="half-block symptom-input__block symptom-input__block_heart-rate hidden">
+    <label for="hr-input" class="value__label value__label_centered"> Batimentos:</label>
 
-    <label for="hr-input" class="value__label"> Batimentos:</label>
+    <svg class="heart-rate__heart" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D16D6A"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+    
     <div class="value__display">
       <input 
         type="number" 
@@ -187,9 +207,9 @@
   </div>
 
   <div id="bp-block" class="half-block symptom-input__block symptom-input__block_blood-pressure hidden">
-    Pressão Arterial
+    <h2 class="bp-title">Pressão Arterial</h2>
 
-    <label for="bp-systolic-input" class="value__label"> Sístole:</label>
+    <label for="bp-systolic-input" class="bp-label"> Sístole</label>
     <div class="value__display">
       <input 
         type="number" 
@@ -203,7 +223,7 @@
       <p class="value__unit">mm Hg</p>
     </div>
 
-    <label for="bp-diastolic-input" class="value__label"> Diástole:</label>
+    <label for="bp-diastolic-input" class="bp-label"> Diástole</label>
     <div class="value__display">
       <input 
         type="number" 
@@ -216,17 +236,19 @@
         class="value">
       <p class="value__unit">mm Hg</p>
     </div>
+
+    <label class="bp-label"> Pressão Arterial Média (PAM) </label>
+    <h3 class="bp-map-display"> </h3>
   </div>
   
   <div id="ecg-block" class="half-block symptom-input__block symptom-input__block_ecg hidden">
-    <label for="ecg__result" class="value__label">Selecione o resultado do eletrocardiograma mais recente:</label>
+    <label for="ecg__result" class="value__label">Qual o resultado do seu eletrocardiograma mais recente?</label>
     <select id="ecg__result" class="ecg__result">
       <option value="sinus-rythm">Ritimo Sinuvial</option>
       <option value="bradycardia">Bradicardia</option>
       <option value="tachycardia">Taquicardia</option>
       <option value="afib">Fibrilação Atrial</option>
       <option value="atrial-flutter">Flutter Atrial (ou Flutter Auricular)</option>
-      <option value="pvc">Extrassístole Ventricular (ou Contração Ventricular Prematura)</option>
       <option value="qt-prolongation">Prolongamento do Intervalo QT (ou Intervalo QT Longo)</option>
       <option value="vtach">Taquicardia ventricular</option>
     </select>
@@ -259,19 +281,40 @@
     Exportar Formulário
   </button>
 
-  <div class="config-popup-bg hidden">
+  <div class="config-popup__bg hidden">
     <div class="config-popup">
-      <button class="close-button">
+       <button class="close-button">
         X
       </button>
 
-      <button id="button-logout" class="medium-button">
-        Sair
-      </button>
+      <h1 class="config-popup__title">Sistema Web <span class="red-span">de Triagem</span></h1>
+      <h2 class="config-popup__subtitle">
+        Protótipo desenvolvido por <b class="bold">Naomi Marra Marcondes</b>
+        em conjunto com <b class="bold">José Pedro Silvério Assis</b> para a 
+        <b class="bold">XI Jornada de Iniciação Cientifica</b> 
+        do Centro Universitário São Lourenço.
+      </h2>
 
-      <button id="button-delete" class="medium-button">
-        Deletar Dados
-      </button>
+      <div class="config-popup__buttons">
+        <p class="config-popup__button-caption">
+          Voltar para a tela de cadastro.
+        </p>
+
+        <p class="config-popup__button-caption">
+          Apagar todos os dados cadastrados.<br>
+          <span class="red-span">AVISO: ESSA AÇÃO NÃO PODE SER DESFEITA</span>
+        </p>
+        <button id="button-logout" class="medium-button button-blue">
+          Sair
+        </button>
+
+        <button id="button-delete" class="medium-button button-red">
+          Deletar Dados
+        </button>
+      </div>
+      <p>
+        V 0.0.3
+      </p>
     </div>
   </div>
   </footer>

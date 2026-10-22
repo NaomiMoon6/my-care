@@ -1,4 +1,4 @@
-.config-popup-bg {
+.config-popup__bg {
   width: 100%;
   height: 100vh;
   background: linear-gradient(90deg, rgba(211, 234, 248, 0.5) 0%, rgba(250, 242, 255, 0.5) 50%, rgba(249, 216, 216, 0.5) 100%);
@@ -26,4 +26,34 @@
   justify-content: center;
   align-items: center;
   padding: 100px;
+}
+
+.config-popup__title {
+  color: navy;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.config-popup__subtitle {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 40px;
+  max-width: 1000px;
+}
+.config-popup__buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  margin-bottom: 100px;
+}
+
+.config-popup__button-caption{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 30px;
 }

@@ -10,10 +10,15 @@
 @import url(./blocks/half-block.css);
 @import url(./blocks/symptom-input.css);
 @import url(./blocks/priority-level.css);
+@import url(./blocks/welcome-popup.css);
 @import url(./blocks/register-form.css);
 @import url(./blocks/config-popup.css);
 
 /* Elements */
-@import url(./elements/temperature.css);
-@import url(./elements/ecg.css);
 @import url(./elements/buttons.css);
+@import url(./elements/temperature.css);
+@import url(./elements/glucose.css);
+@import url(./elements/saturation.css);
+@import url(./elements/heart-rate.css);
+@import url(./elements/blood-pressure.css);
+@import url(./elements/ecg.css);

@@ -1,0 +1,50 @@
+.symptom-input__block_saturation{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.progress-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg); /* Starts the progress from the top */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.243));
+}
+
+.progress-ring__track,
+.progress-ring__bar {
+  fill: none;
+  stroke-width: 32;
+}
+
+.progress-ring__track {
+  stroke: aliceblue;
+}
+
+.progress-ring__bar {
+  stroke: url(#blueToBlue);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s ease;
+}
+
+/* Center the input over the SVG */
+#saturation-input {
+  position: absolute;
+  right: 40%;
+  width: 150px;
+  max-width: 150px;
+  font-size: 50px;
+}
+
+#saturation-unit {
+  position: absolute;
+  right: 30%;
+  font-size: 50px;
+}

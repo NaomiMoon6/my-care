@@ -1,4 +1,5 @@
 import { PatientManager } from '../database/patientManager.js';
+import { setWelcomeText } from './mainPage.js';
 
 const startPopup = document.querySelector(".start-popup");
 const registerFormToggle = startPopup.querySelector(".register-form-popup");
@@ -65,7 +66,8 @@ continueButton.addEventListener("click", function(){
       field5.classList.add("hidden");
       field1.classList.remove("hidden");
       field = 1;
-      location.reload();
+
+      setWelcomeText();
       break;
   }
 });

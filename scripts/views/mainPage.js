@@ -4,14 +4,17 @@ let patient = PatientManager.loadPatient();
 
 const welcomeText = document.querySelector(".header__welcome");
 
-if(!patient.name || !patient.cpf){
-    
-} else {
-  welcomeText.textContent = "Olá, " + patient.name;
+export function setWelcomeText() {
+  patient = PatientManager.loadPatient();
+  const nameArray = patient.name.split(" ");
+
+  welcomeText.textContent = "Olá, " + nameArray[0];
 }
 
+setWelcomeText();
+
 const startPopup = document.querySelector(".start-popup");
-const configPopup = document.querySelector(".config-popup-bg");
+const configPopup = document.querySelector(".config-popup__bg");
 const buttonConfig = document.getElementById("button-config");
 const buttonClose = document.querySelectorAll(".close-button");
 const buttonReport = document.getElementById("button-report");
@@ -36,7 +39,7 @@ buttonDelete.addEventListener("click", function() {
 
 buttonClose.forEach((button) => {
   button.addEventListener("click", () => {
-    button.closest('[class*="popup-bg"]').classList.add("hidden");
+    button.closest('[class*="popup__bg"]').classList.add("hidden");
   });
 });
 

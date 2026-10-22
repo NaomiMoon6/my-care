@@ -18,6 +18,10 @@
   margin: 10px;
 }
 
+.value__label_centered{
+  text-align: center;
+}
+
 .value__display{
   display: flex;
   border-radius: 10px;

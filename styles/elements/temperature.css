@@ -26,7 +26,7 @@
 
 .temperature-slider {
   position: absolute;
-  top: 150px;
+  top: 140px;
 
   writing-mode: vertical-lr;
   direction: rtl; /* Puts min (0) at the bottom and max (100) at the top */
@@ -41,7 +41,7 @@
   /* Dynamic CSS Gradient Track */
   background: linear-gradient(
     to top,
-    #34C759 0%,                  /* Green at bottom */
+    #4334c7 0%,                  /* Green at bottom */
     #FF9500 50%,                 /* Yellow at middle */
     #FF3B30 100%                 /* Red at top */
   );

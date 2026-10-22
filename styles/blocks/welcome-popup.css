@@ -1,0 +1,39 @@
+.start-popup {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(211, 234, 248) 0%, rgba(250, 242, 255, 1) 50%, rgb(249, 216, 216) 100%);
+  position: fixed;
+  z-index: 1;
+}
+
+.welcome-popup{
+  margin: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px
+}
+
+.welcome-poppup__title{
+  font-size: 70px;
+  color: navy;
+
+  text-align: left;
+  width: 100%;
+}
+.welcome-poppup__paragraph{
+  color: #D16D6A;
+  font-size: 50px;
+
+  text-align: right;
+  width: 100%;
+}
+
+.welcome-poppup__button-divider{
+  margin-top: 150px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
