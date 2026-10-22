@@ -118,6 +118,12 @@
 }
 
 @media (max-width: 500px) {
+  .big-button{
+    padding: 20px;
+    max-width: 200px;
+    font-size: 25px;
+  }
+
   .button__icon{
     width: 30px;
     margin-right: 5px;

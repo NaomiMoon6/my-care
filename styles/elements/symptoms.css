@@ -1,3 +1,143 @@
+/* ------------------------------------------------------------------ */
+/* Symptoms block (list inside the page)                               */
+/* ------------------------------------------------------------------ */
+.symptom-input__block_questions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.symptoms__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.symptoms__title {
+  margin: 0;
+}
+
+.symptoms__add {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(247, 244, 255);
+  box-shadow: 2px 2px 5px #a9c5cc;
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Icon drawn in CSS so the button has no text of its own */
+.symptoms__add::before {
+  content: "+";
+  font-family: "Poppins";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: navy;
+}
+
+.symptoms__add:hover {
+  background-color: aliceblue;
+  transform: scale(1.1);
+}
+
+.symptoms__list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+}
+
+.symptoms__list:empty::before {
+  content: "Nenhum sintoma selecionado. Use o botão + para adicionar.";
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: navy;
+}
+
+.symptoms__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 12px 16px;
+  color: navy;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 2px solid aliceblue;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #a9c5cc;
+}
+
+.symptoms__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.symptoms__name {
+  font-size: 18px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.symptoms__location {
+  font-size: 14px;
+  font-weight: 300;
+  color: #D16D6A;
+}
+
+.symptoms__remove {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.symptoms__remove::before {
+  content: "×";
+  font-family: "Poppins";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: #D16D6A;
+}
+
+.symptoms__remove:hover {
+  background-color: #fbe8e8;
+}
+
+/* ------------------------------------------------------------------ */
+/* Add symptom popup                                                   */
+/* ------------------------------------------------------------------ */
 .symptom-popup__bg {
   width: 100%;
   height: 100vh;
@@ -5,162 +145,240 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
-.symptom-popup{
-  width: calc(100vw - 400px);
-  height: calc(100vh - 400px);
+.symptom-popup {
   position: fixed;
-  top: 100px;
-  left: 100px;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+
+  box-sizing: border-box;
+  width: min(800px, calc(100vw - 40px));
+  height: min(750px, calc(100vh - 40px));
+  height: min(750px, calc(100dvh - 40px));
+  padding: 15px 30px 30px;
 
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50px;
+  border-radius: 40px;
   border: 2px solid rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.symptom-popup__header {
+  flex-shrink: 0;
+  display: flex;
   align-items: center;
-  padding: 100px;
+  min-height: 75px;
+  padding-left: 75px; /* leaves room for the close button */
 }
 
 .symptom-popup__title {
   color: navy;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 50px;
 }
 
-.symptom-popup__subtitle {
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 100px;
-  text-align: center;
-  line-height: 40px;
-  max-width: 1000px;
-}
-.symptom-popup__buttons{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+.symptom-popup__search {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 15px 0;
+  padding: 14px 22px;
 
-  margin-bottom: 100px;
-}
-
-.symptom-popup__button-caption{
+  font-family: "Poppins";
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
+  color: navy;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid aliceblue;
+  border-radius: 50px;
+  outline: none;
+}
+
+.symptom-popup__search:focus {
+  border-color: #1d8beb;
+}
+
+.symptom-popup__filters {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.symptom-popup__filter {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 8px 16px;
+
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+  color: navy;
+
+  background-color: rgb(247, 244, 255);
+  border: 2px solid aliceblue;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px #a9c5cc;
+  cursor: pointer;
+}
+
+.symptom-popup__filter:hover {
+  background-color: aliceblue;
+}
+
+.symptom-popup__filter_active,
+.symptom-popup__filter_active:hover {
+  color: white;
+  background-color: navy;
+  border-color: navy;
+  box-shadow: none;
+}
+
+.symptom-popup__list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style: none;
+  margin: 0;
+  padding: 4px 6px 4px 0;
+}
+
+.symptom-popup__list > li {
+  flex-shrink: 0;
+}
+
+.symptom-popup__list:empty::before {
+  content: "Nenhum sintoma encontrado.";
+  padding: 30px 0;
   text-align: center;
-  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  color: navy;
 }
 
-.hidden_break{
-  display: none;
+.symptom-popup__message {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: #D16D6A;
 }
 
-@media (max-height: 900px) {
-  .symptom-popup__title {
-    margin-bottom: 30px;
-  }
+.symptom-popup__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 20px;
 
-  .symptom-popup__subtitle {
-    margin-bottom: 50px;
-  }
-  .symptom-popup__buttons{
-    margin-bottom: 50px;
-  }
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: navy;
+
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 2px solid aliceblue;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #a9c5cc;
+  cursor: pointer;
 }
 
-@media (max-height: 750px) or (max-width: 1200px) {
-  .symptom-popup__title {
-    margin-bottom: 30px;
-    font-size: 40px;
-  }
-
-  .symptom-popup__subtitle {
-    margin-bottom: 40px;
-    font-size: 20px;
-  }
-  .symptom-popup__buttons{
-    margin-bottom: 40px;
-  }
-
-  .symptom-popup__button-caption{
-    font-size: 15px;
-    line-height: 20px;
-  }
+.symptom-popup__item:hover:not(:disabled) {
+  background-color: aliceblue;
 }
 
-@media (max-width: 900px) {
-  .symptom-popup{
-    width: calc(100vw - 300px);
-    height: calc(100vh - 300px);
-    top: 50px;
-    left: 50px;
-  }
+.symptom-popup__item:disabled {
+  opacity: 0.45;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.symptom-popup__item-location {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #D16D6A;
 }
 
 @media (max-width: 800px) {
-  .symptom-popup{
-    padding: 50px;
-    width: calc(100vw - 200px);
-    height: calc(100vh - 200px);
+  .symptom-popup {
+    padding: 15px 20px 20px;
+    border-radius: 30px;
+  }
+
+  .symptom-popup__header {
+    min-height: 50px;
+    padding-left: 50px; /* close button is 50px on this width */
   }
 
   .symptom-popup__title {
-    margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 28px;
   }
 
-  .symptom-popup__subtitle {
-    margin-bottom: 20px;
-    font-size: 15px;
-    line-height: 20px;
-  }
-  .symptom-popup__buttons{
-    margin-bottom: 20px;
+  .symptom-popup__search {
+    font-size: 16px;
+    padding: 10px 18px;
   }
 
-  .symptom-popup__button-caption{
-    font-size: 10px;
-    line-height: 15px;
+  .symptom-popup__filter {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .symptom-popup__item {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .symptom-popup__item-location {
+    font-size: 12px;
+  }
+
+  .symptoms__add {
+    width: 40px;
+    height: 40px;
+  }
+
+  .symptoms__add::before {
+    font-size: 26px;
+  }
+
+  .symptoms__name {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
-  .symptom-popup{
-    padding: 30px;
-    width: calc(100vw - 120px);
-    height: calc(100vh - 120px);
-    top: 30px;
-    left: 30px;
+  /* One scrollable row of filters instead of several wrapped rows */
+  .symptom-popup__filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
   }
 
-  .symptom-popup__buttons{
-    display: flex;
+  .symptom-popup__title {
+    font-size: 22px;
+  }
+
+  .symptom-popup__item {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-
-    margin-bottom: 30px;
-  }
-
-  .symptom-popup__button-caption{
-    order: 1;
-  }
-
-  .symptom-popup__button-caption_hidden{
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-    
-  .hidden_break{
-    display: inline;
+    align-items: flex-start;
+    gap: 4px;
   }
 }

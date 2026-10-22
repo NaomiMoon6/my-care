@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Triagem</title>
     <link href="./styles/index.css" rel="stylesheet" />
+    <link rel="icon" href="assets/risk-level/heart.svg">
   </head>
 <body>
   <div class="start-popup">
@@ -109,7 +110,12 @@
   </header>
   <main class="page">
     <div id="symptoms-block" class="half-block symptom-input__block symptom-input__block_questions">
-      Sintomas
+      <div class="symptoms__header">
+        <h2 class="value__label symptoms__title">Sintomas</h2>
+        <button id="symptom-add" type="button" class="symptoms__add" aria-label="Adicionar sintoma" title="Adicionar sintoma"></button>
+      </div>
+
+      <ul id="symptom-list" class="symptoms__list" aria-live="polite"></ul>
     </div>
 
     <div id="temp-block" class="half-block symptom-input__block symptom-input__block_temperature hidden">
@@ -146,7 +152,7 @@
         min="30.0" 
         max="150.0" 
         step="0.1" 
-        value="100" 
+        value="80" 
         class="value">
       <p class="value__unit">mg/dL</p>
     </div>
@@ -287,7 +293,7 @@
   </div>
     
   <div class="half-block priority-level"> 
-    <img src="heart.svg" class="heart">
+    <img src="assets/risk-level/heart.svg" class="heart">
     <h2 class="priority-level__title">Nível de risco:</h2>
     <h3 class="priority-level__value">Baixo</h3>
   </div>
@@ -335,7 +341,7 @@
         </button>
       </div>
       <p>
-        V 0.0.5
+        V 0.0.6
       </p>
     </div>
   </div>
