@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: 500px;
 }
 
 .ecg{
@@ -40,9 +39,7 @@
   font-family: "Poppins";
   font-weight: 600;
 
-  min-width: 300px;
-  width: min-content;
-  max-width: 500px;
+  max-width: 400px;
 
   display: flex;
   justify-content: center;
@@ -60,5 +57,31 @@
   }
   100% {
     transform: translateX(-33%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .ecg{
+    width: 300px;
+    height: 100px;
+  }
+
+  .ecg__result{
+    font-size: 20px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ecg{
+    width: 250px;
+    height: 80px;
+  }
+
+  .ecg__result{
+    font-size: 15px;
+    max-width: 250px;
+    padding: 10px;
+    margin: 20px 0;
   }
 }

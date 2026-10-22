@@ -13,25 +13,32 @@
   justify-content: center;
 }
 
-.progress-ring {
-  transform: rotate(-90deg); /* Starts the progress from the top */
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.243));
-}
+@media (max-width: 1100px) {
+  .saturation-ring {
+    transform: rotate(-90deg); /* Starts the progress from the top */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.243));
+  }
 
-.progress-ring__track,
-.progress-ring__bar {
-  fill: none;
-  stroke-width: 32;
-}
+  .saturation-track_big,
+  .saturation-bar_big {
+    fill: none;
+    stroke-width: 32;
+  }
 
-.progress-ring__track {
-  stroke: aliceblue;
-}
+  .saturation-track_big {
+    stroke: aliceblue;
+  }
 
-.progress-ring__bar {
-  stroke: url(#blueToBlue);
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.35s ease;
+  .saturation-bar_big {
+    stroke: url(#blueToBlue);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s ease;
+  }
+
+  .saturation-track_small, 
+  .saturation-bar_small {
+    display: none;
+  }
 }
 
 /* Center the input over the SVG */

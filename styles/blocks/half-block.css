@@ -21,17 +21,17 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .half-block{
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 400px;
+    min-height: 400px;
 
     max-width: 400px;
     max-height: 400px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .half-block{
     min-width: 300px;
     min-height: 300px;

@@ -27,3 +27,16 @@
 .heart{
   width: 350px;
 }
+
+@media (max-width: 900px) {
+  .priority-level__title{
+    font-size: 25px;
+  }
+
+  .priority-level__value{ 
+    font-size: 70px;
+  }
+  .heart{
+    width: 250px;
+  }
+}

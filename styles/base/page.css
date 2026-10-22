@@ -7,7 +7,6 @@ body{
 
   font-family: "Poppins";
   font-weight: 500;
-  overflow: hidden;
 }
 
 .page{
@@ -40,11 +39,7 @@ body{
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    overflow: scroll;
-  }
-
+@media (max-width: 900px) {
   .page{
     display: flex;
     flex-direction: column;

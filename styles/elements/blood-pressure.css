@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: start;
-  gap:50px;
+  gap: 30px;
 }
 
 .bp-title {
@@ -16,10 +16,10 @@
 
 .bp-label{
   font-weight: 300;
-  font-size: 30px;
+  font-size: 25px;
   color: navy;
   margin: 10px;
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 
@@ -30,7 +30,7 @@
   background-color: #c3c3c3;
   box-shadow: 2px 2px 4px #0000002a;
 
-  width: 150px;
+  width: 200px;
   height: 70px;
 
   color: #ffffffeb;
@@ -42,4 +42,33 @@
 
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .bp-map-display {
+    width: 150px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bp-label {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bp-title {
+    font-size: 25px;
+  }
+
+  .bp-label {
+    font-size: 17px;
+  }
+
+  .bp-map-display {
+    width: 130px;
+  }
 }

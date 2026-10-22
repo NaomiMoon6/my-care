@@ -1,6 +1,6 @@
 const input = document.getElementById('saturation-input');
-const circle = document.querySelector('.progress-ring__bar');
-const progressBar = document.querySelector('.progress-ring__bar');
+const circle = document.querySelector('.saturation-ring');
+const progressBar = document.querySelector('.saturation-bar__big');
 
 // 1. Calculate the circumference based on the radius (r = 50)
 const radius = circle.r.baseVal.value;
