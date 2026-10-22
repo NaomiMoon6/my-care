@@ -31,3 +31,26 @@ body{
 .bold {
   font-weight: 700;
 }
+
+
+
+@media (max-width: 800px) {
+  .page{
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow: scroll;
+  }
+
+  .page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+  }
+}

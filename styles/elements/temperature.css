@@ -78,3 +78,45 @@
   width: 200px;
   height: 400px;
 }
+
+@media (max-width: 1200px) {
+  .temperature-slider {
+    top: 120px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .temperature-slider {
+    top: 120px;
+  }
+
+  .symptom-input__block_temperature{
+    flex-direction: column;
+  }
+
+  .temperature-value{
+    flex-direction: row;
+    
+    order: -1;
+    padding: 10px;
+
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .temperature-slider {
+    top: 100px;
+    height: 185px;
+  }
+
+  .thermometer{
+    width: 200px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+
+}

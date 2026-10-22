@@ -5,8 +5,38 @@
   max-width: 600px;
   max-height: 500px;
 
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 
   box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .half-block{
+    min-width: 300px;
+    min-height: 300px;
+
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .half-block{
+    min-width: 200px;
+    min-height: 200px;
+
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .half-block{
+    min-width: 300px;
+    min-height: 300px;
+
+    max-width: 400px;
+    max-height: 400px;
+  }
 }

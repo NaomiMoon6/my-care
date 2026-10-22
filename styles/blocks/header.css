@@ -89,6 +89,16 @@
   .header__question{
     font-size: 20px;
   }
+
+  .nav__button{
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .nav__icon{
+    width: 35px;
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 800px) {
@@ -101,6 +111,16 @@
   .header__welcome{
     text-overflow: none;
   }
+
+  .nav__button{
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .nav__icon{
+    width: 25px;
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 500px) {
@@ -112,5 +132,12 @@
 
   .header__welcome{
     text-overflow: none;
+  }
+
+  .nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 20px;
   }
 }
