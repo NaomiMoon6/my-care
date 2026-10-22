@@ -1,11 +1,11 @@
 export class PatientManager {
   constructor(id = "patientData"){
     this.id = id;
+    this.triageId = id + "Triage";
   }
 
   savePatient(patientData){
-    const data = JSON.stringify(patientData);
-    localStorage.setItem(this.id, data);
+    localStorage.setItem(this.id, JSON.stringify(patientData));
   }
 
   loadPatient(){
@@ -23,7 +23,18 @@ export class PatientManager {
     return JSON.parse(data);
   }
 
+  // Latest triage snapshot (vitals, symptoms, score, level)
+  saveTriage(triageData){
+    localStorage.setItem(this.triageId, JSON.stringify(triageData));
+  }
+
+  loadTriage(){
+    const data = localStorage.getItem(this.triageId);
+    return data ? JSON.parse(data) : null;
+  }
+
   clearData() {
     localStorage.removeItem(this.id);
+    localStorage.removeItem(this.triageId);
   }
 }

@@ -1,4 +1,5 @@
 import { PatientManager } from '../database/patientManager.js';
+import { exportReport } from '../modules/riskAlgorithm.js';
 
 let patient = PatientManager.loadPatient();
 
@@ -25,6 +26,8 @@ buttonConfig.addEventListener("click", function() {
 
   configPopup.classList.remove("hidden");
 })
+
+buttonReport.addEventListener("click", exportReport);
 
 buttonLogOut.addEventListener("click", function() {
 
